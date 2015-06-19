@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProximityTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPN-mR-NVr">
+                                <rect key="frame" x="250" y="74" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bMg-tG-koJ"/>
+                                </constraints>
+                                <state key="normal" title="Start checking">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCheckingToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Chx-df-D7k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not checking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB6-pL-S1I">
+                                <rect key="frame" x="249" y="132" width="102" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bRO-2Z-eEx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sceen on" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVs-0s-j04">
+                                <rect key="frame" x="264" y="187" width="73" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="TeY-kW-Obc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YB6-pL-S1I" firstAttribute="top" secondItem="kPN-mR-NVr" secondAttribute="bottom" constant="28" id="2JZ-Qv-IJH"/>
+                            <constraint firstAttribute="centerX" secondItem="YB6-pL-S1I" secondAttribute="centerX" id="FDI-jw-lQU"/>
+                            <constraint firstItem="kPN-mR-NVr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="JaB-4p-Dqo"/>
+                            <constraint firstItem="nVs-0s-j04" firstAttribute="top" secondItem="YB6-pL-S1I" secondAttribute="bottom" constant="34" id="ZjU-GX-6Tz"/>
+                            <constraint firstAttribute="centerX" secondItem="nVs-0s-j04" secondAttribute="centerX" constant="-0.5" id="ZmO-bt-XSK"/>
+                            <constraint firstAttribute="centerX" secondItem="kPN-mR-NVr" secondAttribute="centerX" id="uDd-Zc-8K9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkingToggleButton" destination="kPN-mR-NVr" id="Kpd-t6-hZO"/>
+                        <outlet property="debugLabel" destination="YB6-pL-S1I" id="esy-WW-VQ9"/>
+                        <outlet property="screenDebugLabel" destination="nVs-0s-j04" id="NAW-6D-38Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="438"/>
+        </scene>
+    </scenes>
+</document>
